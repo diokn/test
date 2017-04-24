@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/Users/gliu067/localrepository/LarsonSelenium/BOSTest/lib/selenium-java-2.52.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/localrepository/LarsonSelenium/BOSTest/lib/selenium-server-standalone-2.52.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/localrepository/LarsonSelenium/BOSTest/lib/testng-6.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/gliu067/localrepository/LarsonSelenium/BOSTest/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/Jar/jxl-2.6.12.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/workspace/Framework/lib/java-client-3.4.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/workspace/Framework/lib/selenium-java-3.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/gliu067/workspace/Framework/lib/selenium-server-standalone-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/uiautomator.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

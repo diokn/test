@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MyTest" duration-ms="12244" started-at="2017-02-13T03:35:05Z" finished-at="2017-02-13T03:35:17Z">
+    <groups>
+    </groups>
+    <test name="automation" duration-ms="12244" started-at="2017-02-13T03:35:05Z" finished-at="2017-02-13T03:35:17Z">
+      <class name="com.ZhiHu.autotest.testCase.PeggyTestDemo">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ZhiHu.autotest.testCase.PeggyTestDemo@38bc8ab5]" name="setUp" is-config="true" duration-ms="8944" started-at="2017-02-13T11:35:05Z" finished-at="2017-02-13T11:35:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signIn()[pri:3, instance:com.ZhiHu.autotest.testCase.PeggyTestDemo@38bc8ab5]" name="signIn" duration-ms="3290" started-at="2017-02-13T11:35:13Z" finished-at="2017-02-13T11:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.ZhiHu.autotest.testCase.PeggyTestDemo@38bc8ab5]" name="teardown" is-config="true" duration-ms="0" started-at="2017-02-13T11:35:17Z" finished-at="2017-02-13T11:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ZhiHu.autotest.testCase.PeggyTestDemo -->
+    </test> <!-- automation -->
+  </suite> <!-- MyTest -->
+</testng-results>

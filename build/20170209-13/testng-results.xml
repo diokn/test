@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ZhiHuTest" duration-ms="6659" started-at="2017-02-09T05:56:43Z" finished-at="2017-02-09T05:56:50Z">
+    <groups>
+    </groups>
+    <test name="SignIn" duration-ms="6659" started-at="2017-02-09T05:56:43Z" finished-at="2017-02-09T05:56:50Z">
+      <class name="com.ZhiHu.autotest.testCase.ClickSignInLabel">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ZhiHu.autotest.testCase.ClickSignInLabel@5700d6b1]" name="setUp" is-config="true" duration-ms="6641" started-at="2017-02-09T13:56:43Z" finished-at="2017-02-09T13:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signIn()[pri:3, instance:com.ZhiHu.autotest.testCase.ClickSignInLabel@5700d6b1]" name="signIn" duration-ms="10" started-at="2017-02-09T13:56:50Z" finished-at="2017-02-09T13:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.ZhiHu.autotest.testCase.ClickSignInLabel@5700d6b1]" name="teardown" is-config="true" duration-ms="0" started-at="2017-02-09T13:56:50Z" finished-at="2017-02-09T13:56:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ZhiHu.autotest.testCase.ClickSignInLabel -->
+    </test> <!-- SignIn -->
+  </suite> <!-- ZhiHuTest -->
+</testng-results>

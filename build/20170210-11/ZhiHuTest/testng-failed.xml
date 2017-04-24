@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ZhiHuTest]">
+  <test name="automation(failed)">
+    <classes>
+      <class name="com.ZhiHu.autotest.testCase.PeggyTestDemo">
+        <methods>
+          <include name="signIn"/>
+          <include name="setUp"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.ZhiHu.autotest.testCase.PeggyTestDemo -->
+    </classes>
+  </test> <!-- automation(failed) -->
+</suite> <!-- Failed suite [ZhiHuTest] -->

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--project: 项目构建文件的根标签； basedir: 项目的基准目录 default: -->
+<project name="zhihu autotesting" basedir="." default="runTest LOL">
+    <property name="src" value="src"/>
+    <property name="lib" value="lib"/>
+    <property name="build" value="build"/>
+	
+    <!-- 设置时间戳****** --> 
+    <tstamp>
+        <format property="NOW" pattern="yyyyMMdd-HH"/>
+    </tstamp>
+	
+	<!-- 自定义任务****** -->
+	<!-- name: 任务名，classname: 类名, classpath: 类所在的路径-->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpath="lib/testng-6.8.jar" />
+	
+	<!--path：定义classpath，与target同级； fileset:用来定义目录位置及操作适用于该目录下的那些子目录或文件; include: 拷贝文件;
+	 location: 表示一个文件或目录-->
+	<path id="buildJar">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="${build}/${NOW}" /> <!--????-->
+		<pathelement location="${src}" />	<!--????-->
+	</path>
+	
+	<target name="cleanBuildPath" >
+		<echo message="Delete existing build files......" />
+		<delete dir="${build}/${NOW}" />
+	</target>
+	
+	
+	<!--初始化****** -->
+    <target name="init">
+    	<echo message="init......初始化中。。。。"/>
+        <mkdir dir="${build}/${NOW}"/>   <!--创建目录一个名为build的文件目录 -->
+    </target>
+	
+	<!--编译项目******-->
+    <target name="compile" depends="init"> <!--target之间是可以相互依赖的 -->
+        <echo message="compiling project.......编译中。。。。" />
+        <javac srcdir="${src}"  		   
+        	destdir="${build}/${NOW}" 
+        	classpathref="buildJar" 
+        	debug="true"       	
+        />       <!--source="1.8" javac:编译一个或一组java文件; srcdir：源程序的目录; destdir：class文件的输出目录；classpathref:引用某个已定义的路径; debug: 是否包含调试信息; source: JDK版本  -->
+    </target>
+    
+	<target name="runScript" description="run script">
+		<testng classpathref="buildJar" outputDir="${build}/${NOW}">  <!--运行报告输出路径 -->
+			<xmlfileset dir="${src}" includes="testng.xml" />  <!--xmlfileset: 指定testng文件的名称以及所在的路径 -->
+		</testng>	
+	</target>
+	
+	<!--运行******** -->
+	<target name="runTest LOL" description="automation testing">
+		<echo message="Running......开始运行。。。。。。"></echo>
+		<antcall target="cleanBuildPath"/>
+		<antcall target="init" />
+		<antcall target="compile" />
+		<antcall target="runScript" />
+	    <echo message="automation done......"/>
+	</target>
+
+</project>
