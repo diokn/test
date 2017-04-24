@@ -10,5 +10,9 @@ public class Something {
 	Properties path_map = PropertiesFileUtils.getProperties(PathMAP);
 	Properties page_text = PropertiesFileUtils.getProperties(PageTEXT);
 	
+	
+	public static void main(String[] args) {
+		System.out.println("ok,google...");
+	}
 
 }
