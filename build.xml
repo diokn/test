@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--project: 项目构建文件的根标签； basedir: 项目的基准目录 default: -->
-<project name="zhihu autotesting" basedir="." default="runTest LOL">
+<!--project: 项目构建文件的根标签  basedir: 项目的基准目录  default: 用于指定 project 默认执行时所执行的 target 的名称 -->
+<project name="zhihu autotesting" basedir="." default="runMyTest">
     <property name="src" value="src"/>
     <property name="lib" value="lib"/>
     <property name="build" value="build"/>
@@ -48,12 +48,12 @@
     
 	<target name="runScript" description="run script">
 		<testng classpathref="buildJar" outputDir="${build}/${NOW}">  <!--运行报告输出路径 -->
-			<xmlfileset dir="${src}" includes="testng.xml" />  <!--xmlfileset: 指定testng文件的名称以及所在的路径 -->
+			<xmlfileset dir="${basedir}" includes="testng.xml" />  <!--xmlfileset: 指定testng文件的名称以及所在的路径 -->
 		</testng>	
 	</target>
 	
 	<!--运行******** -->
-	<target name="runTest LOL" description="automation testing">
+	<target name="runMyTest" description="automation testing">
 		<echo message="Running......开始运行。。。。。。"></echo>
 		<antcall target="cleanBuildPath"/>
 		<antcall target="init" />

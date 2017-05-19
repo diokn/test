@@ -14,7 +14,7 @@ Java中已经有一个JUnit的测试框架了.TestNG比JUnit功能强大的多. 
 					<include name="signIn" />
 				</methods>			
 			</class> -->
-			<class name="com.ZhiHu.autotest.testCase.PerformMoibleTestCase">
+			<class name="com.ZhiHu.autotest.testCase.Something">
  	 	      <methods>           
                     <include name="SignIn" />                
               </methods>
