@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [MyTest]">
   <test name="automation(failed)">
     <classes>
-      <class name="com.ZhiHu.autotest.testCase.DoubanAutoTest">
+      <class name="com.ZhiHu.autotest.testCase.Something">
         <methods>
-          <include name="createNotes"/>
+          <include name="SignIn"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ZhiHu.autotest.testCase.DoubanAutoTest -->
+      </class> <!-- com.ZhiHu.autotest.testCase.Something -->
     </classes>
   </test> <!-- automation(failed) -->
 </suite> <!-- Failed suite [MyTest] -->

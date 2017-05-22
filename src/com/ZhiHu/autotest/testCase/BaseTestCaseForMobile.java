@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class BaseTestCase {
+public class BaseTestCaseForMobile {
 	
 	protected static AndroidDriver<AndroidElement> androidDriver;
 	private static String deviceName = "emulator-5554";  

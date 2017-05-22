@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -27,8 +26,21 @@ public class BaseTestCaseForWeb {
 	public void setUp() throws Exception {
 		logger.info("start setup driver environment ");
 		
-		driver = WebDriverCreator.getWebDriver(xmlConfigUtils
-				.getNodeValue("env1"));
+		driver = WebDriverCreator.getWebDriver(xmlConfigUtils.getNodeValue("env2"));
+		
+		System.out.print("current Web Driver is: " + driver.toString());
+		
+		if (driver != null) {
+			driver.get(xmlConfigUtils.getNodeValue("coutts"));//please replace the url before executing the scripts
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			Thread.sleep(1000);
+		}
+	}
+	
+	/*public static void main(String[] args) {
+		
+		driver = WebDriverCreator.getWebDriver(xmlConfigUtils.getNodeValue("env2"));
 		
 		System.out.print("current Web Driver is: " + driver.toString());
 		
@@ -36,9 +48,10 @@ public class BaseTestCaseForWeb {
 			driver.get(xmlConfigUtils.getNodeValue("perfDevUrl"));//please replace the url before executing the scripts
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
-			Thread.sleep(1000);
+			//Thread.sleep(1000);
 		}
-	}
+	}*/
+	
 
 	@AfterTest
 	public void teardown() {

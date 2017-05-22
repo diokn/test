@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MyTest">
-              <span class="suite-name border-passed">MyTest</span>
+              <span class="suite-name border-skipped">MyTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-MyTest" class="hide-methods skipped suite-MyTest"> (hide)</a> <!-- hide-methods skipped suite-MyTest -->
+                      <a href="#" panel-name="suite-MyTest" class="show-methods skipped suite-MyTest"> (show)</a> <!-- show-methods skipped suite-MyTest -->
+                    </span>
+                    <div class="method-list-content skipped suite-MyTest">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MyTest" title="com.ZhiHu.autotest.testCase.Something" hash-for-method="SignIn">SignIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-MyTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -102,10 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MyTest" class="panel MyTest">
+          <div class="suite-MyTest-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.ZhiHu.autotest.testCase.Something</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SignIn">
+                  </a> <!-- SignIn -->
+                  <span class="method-name">SignIn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTest-class-skipped -->
         </div> <!-- panel MyTest -->
         <div panel-name="test-xml-MyTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/gliu067/workspace/Framework/src/testng.xml</span>
+            <span class="header-content">/Users/gliu067/workspace/Framework/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -114,11 +143,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;MyTest&quot;&gt;
   &lt;test name=&quot;automation&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ZhiHu.autotest.testCase.PerformMoibleTestCase&quot;&gt;
+      &lt;class name=&quot;com.ZhiHu.autotest.testCase.Something&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;SignIn&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ZhiHu.autotest.testCase.PerformMoibleTestCase --&gt;
+      &lt;/class&gt; &lt;!-- com.ZhiHu.autotest.testCase.Something --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- automation --&gt;
 &lt;/suite&gt; &lt;!-- MyTest --&gt;
@@ -158,11 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'SignIn')
+data.setCell(0, 2, 'com.ZhiHu.autotest.testCase.Something')
+data.setCell(0, 3, 2);
 window.suiteTableData['MyTest']= { tableData: data, tableDiv: 'times-div-MyTest'}
 return data;
 }
               </script>
+              <span class="suite-total-time">Total running time: 2 ms</span>
               <div id="times-div-MyTest">
               </div> <!-- times-div-MyTest -->
             </div> <!-- times-div -->
@@ -188,13 +222,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ZhiHu.autotest.testCase.PerformMoibleTestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ZhiHu.autotest.testCase.Something</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">SignIn</span>
+                <span class="method-start">1711 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

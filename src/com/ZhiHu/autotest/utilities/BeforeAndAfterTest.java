@@ -12,7 +12,7 @@ import com.ZhiHu.autotest.utilities.XmlParseHandler;
 
 public class BeforeAndAfterTest {
 	
-	protected XmlParseHandler xmlConfigObj = XmlParseHandler.getConfigDocInstance();
+	protected XmlParseHandler xmlConfigObj = XmlParse.getConfigDocInstance();
 	protected Logger logger = Logger.getLogger(this.getClass()); //包与包之间进行访问，被访问的包中的类及其成员，需要被public修饰，而不同包中的子类还可以直接访问父类中被protected权限修饰的成员。包与包之间只有这两种权限
 	protected WebDriver driver;  
 	

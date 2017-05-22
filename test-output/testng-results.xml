@@ -1,47 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="MyTest" duration-ms="244457" started-at="2017-04-20T08:09:52Z" finished-at="2017-04-20T08:13:56Z">
+  <suite name="MyTest" duration-ms="1722" started-at="2017-05-22T03:14:32Z" finished-at="2017-05-22T03:14:33Z">
     <groups>
     </groups>
-    <test name="automation" duration-ms="244457" started-at="2017-04-20T08:09:52Z" finished-at="2017-04-20T08:13:56Z">
-      <class name="com.ZhiHu.autotest.testCase.PerformMoibleTestCase">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.ZhiHu.autotest.testCase.PerformMoibleTestCase@20e2cbe0]" name="setUp" is-config="true" duration-ms="0" started-at="2017-04-20T16:09:52Z" finished-at="2017-04-20T16:09:52Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Remote install failed: pkg: /data/local/tmp/5a693f56fb36d2c935885f19e5740851.apk
-Failure [INSTALL_FAILED_NO_MATCHING_ABIS] (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 243.88 seconds
-Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:03:33'
-System info: host: 'sdc', ip: '172.31.162.54', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.1', java.version: '1.8.0_111'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
-            </message>
+    <test name="automation" duration-ms="1722" started-at="2017-05-22T03:14:32Z" finished-at="2017-05-22T03:14:33Z">
+      <class name="com.ZhiHu.autotest.testCase.Something">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.ZhiHu.autotest.testCase.Something@6ec8211c]" name="setUp" is-config="true" duration-ms="0" started-at="2017-05-22T11:14:32Z" finished-at="2017-05-22T11:14:32Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Remote install failed: pkg: /data/local/tmp/5a693f56fb36d2c935885f19e5740851.apk
-Failure [INSTALL_FAILED_NO_MATCHING_ABIS] (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 243.88 seconds
-Build info: version: '2.52.0', revision: '4c2593c', time: '2016-02-11 19:03:33'
-System info: host: 'sdc', ip: '172.31.162.54', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.1', java.version: '1.8.0_111'
-Driver info: io.appium.java_client.android.AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:162)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:171)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:72)
-	at com.ZhiHu.autotest.testCase.PerformMoibleTestCase.setUp(PerformMoibleTestCase.java:39)
+              <![CDATA[java.lang.NullPointerException
+	at com.ZhiHu.autotest.utilities.XmlParseHandler.getNodeValue(XmlParseHandler.java:38)
+	at com.ZhiHu.autotest.testCase.BaseTestCaseForWeb.setUp(BaseTestCaseForWeb.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,15 +37,19 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.ZhiHu.autotest.testCase.PerformMoibleTestCase@20e2cbe0]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-04-20T16:13:56Z" finished-at="2017-04-20T16:13:56Z">
+        <test-method status="SKIP" signature="SignIn()[pri:2, instance:com.ZhiHu.autotest.testCase.Something@6ec8211c]" name="SignIn" duration-ms="2" started-at="2017-05-22T11:14:33Z" finished-at="2017-05-22T11:14:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ZhiHu.autotest.testCase.PerformMoibleTestCase -->
+        </test-method> <!-- SignIn -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.ZhiHu.autotest.testCase.Something@6ec8211c]" name="teardown" is-config="true" duration-ms="0" started-at="2017-05-22T11:14:33Z" finished-at="2017-05-22T11:14:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ZhiHu.autotest.testCase.Something -->
     </test> <!-- automation -->
   </suite> <!-- MyTest -->
 </testng-results>

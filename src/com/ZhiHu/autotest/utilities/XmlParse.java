@@ -8,7 +8,7 @@ import org.w3c.dom.Document;
 
 public class XmlParse {
 
-	private static String configPath = System.getProperty("user.dir")+"/src/com/BOS/resource/config.xml";
+	private static String configPath = System.getProperty("user.dir")+"/src/config.xml"; //获取包含运行环境参数的xml配置文件路径
     private static Document configDoc;
     
     private XmlParse(){

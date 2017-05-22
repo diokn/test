@@ -21,6 +21,7 @@ import com.ZhiHu.autotest.driver.WebDriverCreator;
 import com.ZhiHu.autotest.pageObject.BasePageObjects;
 import com.ZhiHu.autotest.utilities.PropertiesFileUtils;
 import com.ZhiHu.autotest.utilities.Utils;
+import com.ZhiHu.autotest.utilities.XmlParse;
 import com.ZhiHu.autotest.utilities.XmlParseHandler;
 import com.thoughtworks.selenium.Selenium;
 import com.ZhiHu.autotest.utilities.PageCheckHelper;
@@ -45,7 +46,7 @@ public class ClickSignInLabel extends BasePageObjects {
 	Properties zhihu_map = PropertiesFileUtils.getProperties(ZhiHuMAP);
 	Properties page_text = PropertiesFileUtils.getProperties(PAGETEXT);
 	//Map<String, Map<String, String>> signin =ExcelUtils.
-	protected XmlParseHandler xmlConfigObj = XmlParseHandler.getConfigDocInstance();
+	protected XmlParseHandler xmlConfigObj = XmlParse.getConfigDocInstance();
 	WebDriver driver;
 	Logger logger = Logger.getLogger(this.getClass());
 
