@@ -15,7 +15,7 @@ public class Something extends BaseTestCaseForWeb {
 	
 	@Test(priority=2)
 	public void SignIn(){
-		System.out.println("呵呵呵呵...........");
+		System.out.println("！呵呵呵呵6666666...........");
 		
 	}
 
