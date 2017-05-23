@@ -36,7 +36,7 @@ public class WebDriverCreator {
 		//指定chromeDriver插件所在的位置
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/com/ZhiHu/drivers/MacChromedriver");
 		/*
-		 * ChromeDriver仅是在创建是启动，调用quit时关闭浏览器，ChromeDriver是轻量级的服务若在一个比较大的 测试套件中频繁的启动关闭，
+		 * ChromeDriver仅是在创建时启动，调用quit时关闭浏览器，ChromeDriver是轻量级的服务若在一个比较大的 测试套件中频繁的启动关闭，
 		 * 会增加一个比较明显的延时导致浏览器进程不被关闭的情况发生，为了避免这一状况我们可以通过ChromeDriverService来控制ChromeDriver进程的生死，
 		 * 达到用完就关闭的效果避免进程占用情况出现（Running the  server in a child process）,实现如下：
 		 */
@@ -61,5 +61,8 @@ public class WebDriverCreator {
 	    System.out.println("******macFirefox Driver start******");
 		return new FirefoxDriver(profile);
 	}
+	
+	
+	
 
 }

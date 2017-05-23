@@ -3,7 +3,10 @@ package com.ZhiHu.autotest.testCase;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -20,7 +23,7 @@ public class BaseTestCaseForWeb {
 	static final String MSGFILE = System.getProperty("user.dir")
 			+ "/src/com/BOS/resource/message.properties";
 
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -58,4 +61,23 @@ public class BaseTestCaseForWeb {
 		System.out.println("****** in after test ******");
 		//driver.quit();
 	}
+	
+	
+	public static void main(String[] args) {
+		//WebDriver driver = nul;
+		String path = System.getProperty("usr.dir") + "/src/com/ZhiHu/drivers/geckodriver";
+		System.setProperty("webdriver.gecko.driver",path);
+		FirefoxDriver fd = new FirefoxDriver();		
+		/*driver.manage().deleteAllCookies();
+		Cookie ck = new Cookie("PHPSESSID","1b0j3d6sw3cg1g3oyk86mkdxr");
+		driver.manage().addCookie(ck);*/		
+		fd.get("http://localhost:8080/");
+		
+	}
+	
+	
+	
+	
+	
+	
 }
