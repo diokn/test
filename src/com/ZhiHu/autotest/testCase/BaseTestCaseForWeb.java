@@ -72,7 +72,6 @@ public class BaseTestCaseForWeb {
 		Cookie ck = new Cookie("PHPSESSID","1b0j3d6sw3cg1g3oyk86mkdxr");
 		driver.manage().addCookie(ck);*/		
 		fd.get("http://localhost:8080/");
-		
 	}
 	
 	

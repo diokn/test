@@ -50,7 +50,8 @@ public class WebDriverCreator {
 		}
 		ChromeOptions options = new ChromeOptions(); //设置WebDriver启动chrome为默认用户的配置信息（包括书签，扩展程序等）
 		options.addArguments("--test-"); //The arguments to use when starting Chrome
-		return new ChromeDriver(options);		
+		return new ChromeDriver(options);	
+		
 	}
 	
 	
