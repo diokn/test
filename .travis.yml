@@ -1,3 +1,0 @@
-language: java
-install: ant
-os: osx
